@@ -39,7 +39,18 @@
     &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4  &trans           &trans           &kp PSCRN        &kp SLCK         &kp PAUSE_BREAK  &kp UP        &trans        &trans
     &kp CAPS         &kp C_VOL_DN     &kp C_VOL_UP     &kp C_MUTE      &trans          &trans        &kp KP_MULTIPLY  &kp KP_DIVIDE    &kp HOME         &kp PG_UP        &kp LEFT         &kp RIGHT                   &trans
     &trans           &trans           &trans           &trans          &trans          &trans        &kp KP_PLUS      &kp KP_SUBTRACT  &kp END          &kp PG_DN        &kp DOWN         &trans        &trans
-    &trans           &trans           &trans                                                         &trans                                                              &trans           &trans
+    &trans           &trans           &trans                                                         &trans                                                              &trans           &mo 3
+			>;
+		};
+
+		blank {
+// Just so you have access to layer 3
+			bindings = <
+	&trans          &trans            &trans           &trans          &trans          &trans        &trans          &trans            &trans           &trans           &trans           &trans        &trans        &trans           &trans
+	&trans          &trans            &trans           &trans          &trans          &trans        &trans          &trans            &trans           &trans           &trans           &trans        &trans        &trans
+	&trans          &trans            &trans           &trans          &trans          &trans        &trans          &trans            &trans           &trans           &trans           &trans                      &trans           
+	&trans          &trans            &trans           &trans          &trans          &trans        &trans          &trans            &trans           &trans           &trans           &trans        &mo 3
+	                &trans            &trans                                                         &trans                                                              &trans           &trans
 			>;
 		};
 
