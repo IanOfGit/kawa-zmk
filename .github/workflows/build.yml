@@ -46,5 +46,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: kawa
-          path: kawa.uf2
+          path: "*.uf2"
           
