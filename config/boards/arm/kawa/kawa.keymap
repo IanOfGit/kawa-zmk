@@ -6,6 +6,15 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		
+		tri_layer {
+			if-layers = <1 2>;
+			then-layer = <3>;
+		};
+	};
+	
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -36,7 +45,7 @@
 
 			bindings = <
     &kp GRAVE        &kp F1           &kp F2           &kp F3          &kp F4          &kp F5        &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp F11       &kp F12       &kp INS          &trans
-    &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4  &trans           &trans           &kp PSCRN        &kp SLCK         &kp PAUSE_BREAK  &kp UP        &trans        &trans
+    &trans           &trans           &trans           &trans          &trans          &trans        &trans           &trans           &kp PSCRN        &kp SLCK         &kp PAUSE_BREAK  &kp UP        &trans        &trans
     &kp CAPS         &kp C_VOL_DN     &kp C_VOL_UP     &kp C_MUTE      &trans          &trans        &kp KP_MULTIPLY  &kp KP_DIVIDE    &kp HOME         &kp PG_UP        &kp LEFT         &kp RIGHT                   &trans
     &trans           &trans           &trans           &trans          &trans          &trans        &kp KP_PLUS      &kp KP_SUBTRACT  &kp END          &kp PG_DN        &kp DOWN         &trans        &trans
     &trans           &trans           &trans                                                         &trans                                                              &trans           &mo 3
@@ -58,7 +67,7 @@
 			bindings = <
 	&rgb_ug RGB_TOG &rgb_ug RGB_EFR    &rgb_ug RGB_EFF  &rgb_ug RGB_HUD &rgb_ug RGB_HUI &trans        &trans          &trans            &trans           &trans           &trans           &rgb_ug RGB_BRD &rgb_ug RGB_BRI &trans       &bootloader
 	&trans          &trans             &trans           &rgb_ug RGB_SAD &rgb_ug RGB_SAI &trans        &trans          &trans            &trans           &trans           &trans           &rgb_ug RGB_SPD &rgb_ug RGB_SPI &trans
-	&trans          &trans             &trans           &trans          &trans          &trans        &trans          &trans            &trans           &trans           &trans           &trans                      &trans           
+	&bt BT_CLR      &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4  &trans          &trans            &trans           &trans           &trans           &trans                      &trans           
 	&trans          &trans             &trans           &trans          &trans          &trans        &trans          &trans            &trans           &trans           &trans           &trans        &trans           
 				    &trans             &trans                                                         &trans                                                              &trans           &trans
 			>;
